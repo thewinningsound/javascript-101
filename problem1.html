@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>Euler Problem 1</title>
+		<style type="text/css">
+			.result {
+			display: inline;
+			}
+		</style>
+	</head>
+	<body>
+		<p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.</p>
+		<p>Find the sum of all the multiples of 3 or 5 below 1000.</p>
+
+		<div id="result" class="result"><b>Result:  </b></div>
+
+	</body>
+
+	<script type="text/javascript">
+		var result = 0;
+		for (var i = 0; i < 1000; i++) {
+			if (i % 3 == 0 || i % 5 == 0) {
+				result += i;
+			}
+		}
+
+		var obj = document.createElement("div");
+		obj.innerText = result;
+		obj.className = "result";
+
+		document.getElementById("result").appendChild(obj);
+	</script>
+
+
+</html>
